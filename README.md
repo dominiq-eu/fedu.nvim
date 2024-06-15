@@ -1,5 +1,3 @@
-<div align="center">
-
 # fedu.nvim
 
 ## Installation
