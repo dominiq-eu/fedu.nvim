@@ -1,6 +1,9 @@
+-- Template: https://github.com/rktjmp/lush-template/blob/main/lua/lush_theme/lush_template.lua
+
 local lush = require("lush")
+
 local hsl = lush.hsl
-local hsluv = lush.hsluv
+-- local hsluv = lush.hsluv
 
 -- Palette
 local white = "#fafafa"
@@ -71,6 +74,7 @@ local comment_highlight = { fg = lightbluegray }
 --  - Popular plugin integrations
 --
 
+---@diagnostic disable
 local theme = lush(function(injected_functions)
 	local sym = injected_functions.sym
 	return {
@@ -1146,7 +1150,10 @@ local theme = lush(function(injected_functions)
 		lualine_c_filetype_DevIconLua_command({ bg = "#6a6a6a", fg = blue }),
 		lualine_c_filetype_DevIconLua_terminal({ bg = "#6a6a6a", fg = blue }),
 		lualine_c_filetype_DevIconLua_inactive({ bg = "#6a6a6a", fg = blue }),
-		lualine_transitional_lualine_a_normal_to_lualine_c_filetype_DevIconLua_normal({ bg = "#6a6a6a", fg = "#494742" }),
+		lualine_transitional_lualine_a_normal_to_lualine_c_filetype_DevIconLua_normal({
+			bg = "#6a6a6a",
+			fg = "#494742",
+		}),
 		lualine_transitional_lualine_a_normal_to_lualine_c_diagnostics_warn_normal({ bg = "#6a6a6a", fg = "#494742" }),
 		NotifyINFOTitle330({ fg = "#2e3936" }),
 		NotifyINFOBorder330({ fg = "#2b3335" }),
@@ -1179,5 +1186,6 @@ local theme = lush(function(injected_functions)
 		RainbowDelimiterGreen({ fg = green }),
 	}
 end)
+---@diagnostic enable
 
 return theme
