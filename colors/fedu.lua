@@ -17,7 +17,7 @@ vim.g.colors_name = "fedu"
 -- package.loaded["lush_theme.fedu"] = nil
 
 -- include our theme file and pass it to lush to apply
-local theme = require("lush_theme.fedu")
+local theme = require("theme")
 local lush = require("lush")
 
 lush(theme)
